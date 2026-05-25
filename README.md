@@ -56,6 +56,22 @@ Concepts Learned:
 
 ---
 
+### Day 5 — Flexbox Layouts
+Built a Smart Vending Machine UI and learned how Flexbox helps create responsive layouts.
+
+Project:
+- SMARTVEND UI
+
+Concepts Learned:
+- display: flex
+- justify-content
+- align-items
+- flex-wrap
+- Card Layouts
+- Responsive Alignment
+
+---
+
 
 ## 🎯 Goal
 
