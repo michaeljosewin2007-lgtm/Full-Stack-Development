@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111827;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 50px;
+    color: cyan;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+.card {
+    background-color: #1f2937;
+    width: 220px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.3);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px cyan;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.card h2 {
+    margin-top: 15px;
+}
+
+button {
+    background-color: cyan;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: white;
+}
