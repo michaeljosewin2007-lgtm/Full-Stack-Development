@@ -72,6 +72,22 @@ Concepts Learned:
 
 ---
 
+### Day 6 — CSS Grid Dashboard
+Built a modern music streaming dashboard using CSS Grid.
+
+Project:
+- VIBEBOX Music Dashboard
+
+Concepts Learned:
+- display: grid
+- grid-template-columns
+- Dashboard Layouts
+- Sidebar Design
+- UI Structuring
+- Modern Dark UI
+
+---
+
 
 ## 🎯 Goal
 
