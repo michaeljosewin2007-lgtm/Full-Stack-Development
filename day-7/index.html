@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PULSEFIT</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: white;
+        }
+        @keyframes gradientMove {
+
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .navbar {
+            background-color: #111827;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #22c55e !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #22c55e !important;
+        }
+
+        .hero {
+    padding: 120px 0;
+
+    background: linear-gradient(-45deg,
+    #00ff88,
+    #00c853,
+    #0f172a,
+    #1a1a1a);
+
+    background-size: 400% 400%;
+
+    animation: gradientMove 10s ease infinite;
+    display: flex;
+    align-items: center;
+}
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #22c55e;
+            filter: blur(150px);
+            opacity: 0.15;
+            top: -100px;
+            right: -100px;
+}
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        .hero span {
+            color: #22c55e;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+
+        .hero-btn {
+            margin-top: 30px;
+            padding: 12px 30px;
+            background-color: #22c55e;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #16a34a;
+            transform: scale(1.05);
+        }
+
+        .hero img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 25px #22c55e;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .program-card {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            border-color: #22c55e;
+            box-shadow: 0px 0px 20px #22c55e;
+        }
+
+        .program-card h3 {
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        .program-card p {
+            color: #cbd5e1;
+        }
+
+
+        .price-card {
+            background-color: #111827;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+            border: 2px solid #22c55e;
+        }
+
+        .price-card:hover {
+            transform: scale(1.05);
+        }
+
+        .price {
+            font-size: 3rem;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        footer {
+            background-color: #111827;
+            padding: 20px;
+            text-align: center;
+            margin-top: 80px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">PULSEFIT</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Programs</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <h1>Train Hard. <span>Stay Strong.</span></h1>
+
+                    <p>
+                        Transform your body with modern workouts,
+                        expert trainers, and personalized fitness plans.
+                    </p>
+
+                    <button class="hero-btn">Join Now</button>
+
+                </div>
+
+                <div class="col-lg-6 text-center">
+
+                    <img src="gym.webp" alt="Fitness Image">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <h2 class="section-title">Workout Programs</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="program-card">
+
+                    <h3>Strength Training</h3>
+
+                    <p>
+                        Build muscle and improve overall body strength.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="program-card">
+
+                    <h3>Cardio Fitness</h3>
+
+                    <p>
+                        Improve stamina with high-intensity cardio workouts.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="program-card">
+
+                    <h3>Yoga & Flexibility</h3>
+
+                    <p>
+                        Increase flexibility and relax your mind.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <h2 class="section-title">Membership Plans</h2>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+
+                <div class="price-card">
+
+                    <h3>Basic</h3>
+
+                    <p class="price">$19</p>
+
+                    <p>Monthly Access</p>
+
+                    <button class="hero-btn">Get Started</button>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="price-card">
+
+                    <h3>Pro</h3>
+
+                    <p class="price">$49</p>
+
+                    <p>Personal Trainer Included</p>
+
+                    <button class="hero-btn">Join Pro</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>Created by Michael Josewin</p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
