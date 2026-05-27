@@ -88,6 +88,22 @@ Concepts Learned:
 
 ---
 
+### Day 7 — Bootstrap Responsive Website
+Built a responsive fitness landing page using Bootstrap and custom CSS.
+
+Project:
+- PULSEFIT Landing Page
+
+Concepts Learned:
+- Bootstrap Grid System
+- Responsive Design
+- Bootstrap Components
+- Utility Classes
+- Animated Gradients
+- Modern UI Design
+
+---
+
 
 ## 🎯 Goal
 
