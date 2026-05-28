@@ -104,6 +104,20 @@ Concepts Learned:
 
 ---
 
+### Day -8 Basic js
+A modern shopping cart web app built using HTML, CSS, and JavaScript.
+
+Project:
+-NEOCART 🛒
+
+## 📚 What I Learned
+- JavaScript variables and functions
+- Event listeners
+- DOM manipulation
+- Updating UI dynamically
+- Working with dropdown menus
+- Building interactive web apps 
+
 
 ## 🎯 Goal
 
