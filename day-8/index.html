@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoCart</title>
+    
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>NEOCART 🛒</h1>
+        
+
+        <p class="subtitle">
+            Modern Shopping Experience
+        </p>
+        <div class="top-decor">
+            <span class="arrow left">❮❮❮</span>
+            <span class="arrow right">❯❯❯</span>
+        </div>
+
+        <!-- Products -->
+
+        <div class="products">
+
+            <div class="card">
+                <img src="headset.jpg" alt="">
+                <h2>Gaming Headset</h2>
+                <p>$120</p>
+
+                <button onclick="addToCart(120)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="keybord.jpg" alt="">
+                <h2>Mechanical Keyboard</h2>
+                <p>$150</p>
+
+                <button onclick="addToCart(150)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="smart.jpg" alt="">
+                <h2>Smart Watch</h2>
+                <p>$200</p>
+
+                <button onclick="addToCart(200)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Cart Section -->
+
+        <div class="cart">
+
+            <h2>Cart Summary</h2>
+
+            <p>Total Price: $<span id="total">0</span></p>
+
+            <!-- Coupons -->
+
+            <select id="couponSelect">
+            
+                <option value="0">
+                    Select Coupon
+                </option>
+            
+                <option value="10">
+                    SAVE10 - 10% OFF
+                </option>
+            
+                <option value="20">
+                    SAVE20 - 20% OFF
+                </option>
+            
+            </select>
+            
+            <button class="coupon-btn" onclick="applyCoupon()">
+                Apply Coupon
+            </button>
+
+            <h3>
+                Final Price:
+                $<span id="finalPrice">0</span>
+            </h3>
+            <p class="discount-text">
+                ✦ Apply coupons to unlock special discounts! ✦
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
