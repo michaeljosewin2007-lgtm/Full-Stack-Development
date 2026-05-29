@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MOODSYNC</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>MOODSYNC 🎵</h1>
+
+        <p class="subtitle">
+            Smart Playlist Generator
+        </p>
+
+        <!-- Mood Buttons -->
+
+        <div class="moods">
+
+            <button onclick="generatePlaylist('chill')">
+                Chill 🌊
+            </button>
+
+            <button onclick="generatePlaylist('workout')">
+                Workout 💪
+            </button>
+
+            <button onclick="generatePlaylist('night')">
+                Night 🌃
+            </button>
+
+            <button onclick="generatePlaylist('happy')">
+                Happy ☀️
+            </button>
+            <button onclick="shuffleAllSongs()">
+                Shuffle All 🔀
+            </button>
+
+        </div>
+        
+        
+
+        <!-- Playlist -->
+         
+
+        <div class="playlist">
+
+            <h2>Your Playlist</h2>
+
+            <ul id="playlistBox">
+
+                <li>Select a mood to generate songs 🎧</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+    background:
+        linear-gradient(-45deg,
+            #0f172a,
+            #1e3a8a,
+            #7c3aed,
+            #0f172a);
+
+    background-size: 400% 400%;
+
+    animation: gradientMove 10s ease infinite;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.container {
+
+    width: 90%;
+    max-width: 900px;
+
+    text-align: center;
+}
+
+h1 {
+
+    font-size: 4rem;
+
+    text-shadow:
+        0 0 10px #7dd3fc,
+        0 0 20px #7dd3fc;
+}
+
+.subtitle {
+
+    margin-top: 10px;
+
+    color: #cbd5e1;
+}
+
+.moods {
+
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+button {
+
+    background-color: #7c3aed;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    transform: scale(1.05);
+
+    background-color: #2563eb;
+}
+
+.playlist {
+
+    margin-top: 60px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.playlist h2 {
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 10px #7dd3fc;
+}
+
+ul {
+
+    list-style: none;
+}
+
+li {
+
+    margin: 15px 0;
+
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border-radius: 12px;
+
+    font-size: 1.1rem;
+
+    transition: 0.3s;
+}
+
+li:hover {
+
+    transform: translateX(10px);
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.playlist {
+
+    margin-top: 60px;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+
+    border: 2px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.3);
+}
+li {
+
+    background: rgba(255, 255, 255, 0.08);
+}
