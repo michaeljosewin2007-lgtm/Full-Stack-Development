@@ -110,13 +110,30 @@ A modern shopping cart web app built using HTML, CSS, and JavaScript.
 Project:
 -NEOCART 🛒
 
-## 📚 What I Learned
+ 📚 What I Learned
 - JavaScript variables and functions
 - Event listeners
 - DOM manipulation
 - Updating UI dynamically
 - Working with dropdown menus
 - Building interactive web apps 
+
+### Day 9 — Intermediate JavaScript Playlist Generator 🎵
+
+Built a smart mood-based playlist generator using JavaScript logic and dynamic UI themes.
+
+Project:
+- MOODSYNC Playlist Generator
+
+Concepts Learned:
+- Arrays and Objects
+- JavaScript Functions
+- Random Playlist Shuffling
+- Conditional Logic
+- Dynamic Theme Switching
+- Working with Multiple Playlists
+- UI Personalization
+- JavaScript Logic Flow
 
 
 ## 🎯 Goal
