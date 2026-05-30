@@ -1,0 +1,154 @@
+body {
+  text-align: center;
+  background-color: #283149;
+background:
+    linear-gradient(-45deg,
+      #0f172a,
+      #1e3a8a,
+      #7c3aed,
+      #0f172a);
+
+  background-size: 400% 400%;
+
+  animation:
+    gradientMove 10s ease infinite;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+  text-shadow:
+      0 0 10px #ff4fd8,
+      0 0 20px #ff4fd8,
+      0 0 40px #ff4fd8;
+}
+
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+}
+
+.w {
+  background-image: url("images/tom1.png");
+}
+
+.a {
+  background-image: url("images/tom2.png");
+}
+
+.s {
+  background-image: url("images/tom3.png");
+}
+
+.d {
+  background-image: url("images/tom4.png");
+}
+
+.j {
+  background-image: url("images/snare.png");
+}
+
+.k {
+  background-image: url("images/crash.png");
+}
+
+.l {
+  background-image: url("images/kick.png");
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+  transform: scale(0.92);
+  box-shadow:
+      0 0 15px #00f7ff,
+      0 0 35px #00f7ff,
+      0 0 60px #00f7ff;
+  
+    filter: brightness(1.2);
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  border: 3px solid #ffffff55;
+  
+    box-shadow:
+      0 0 10px #ffffff22;
+  
+    backdrop-filter: blur(10px);
+  transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease,
+      filter 0.12s ease;
+  animation:
+      floatDrum 3s ease-in-out infinite;
+}
+@keyframes gradientMove {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes floatDrum {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.drum:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+    0 0 20px #ff4fd8,
+    0 0 50px #ff4fd8;
+
+    cursor: pointer;
+}
+footer {
+
+  opacity: 0.8;
+
+  text-shadow:
+    0 0 10px white;
+}
