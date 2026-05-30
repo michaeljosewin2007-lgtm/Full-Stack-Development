@@ -135,6 +135,23 @@ Concepts Learned:
 - UI Personalization
 - JavaScript Logic Flow
 
+### Day 10 — Advanced Drum Kit DOM Project 🥁
+
+Built an interactive futuristic Drum Kit website using JavaScript DOM Manipulation.
+
+Project:
+- NEOBEATS Drum Kit
+
+Concepts Learned:
+- DOM Manipulation
+- Keyboard Event Listeners
+- Mouse Click Event Listeners
+- Audio Control with JavaScript
+- Dynamic Button Animations
+- JavaScript Functions
+- Event Handling
+- CSS Animations & Glow Effects
+
 
 ## 🎯 Goal
 
