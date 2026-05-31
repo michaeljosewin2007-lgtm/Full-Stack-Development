@@ -152,6 +152,25 @@ Concepts Learned:
 - Event Handling
 - CSS Animations & Glow Effects
 
+### Day 11 — Node.js + Express + EJS Chat Application 💬
+
+Built a futuristic Discord-inspired community chat application using Node.js, Express, and EJS.
+
+Project:
+- VIBECHAT
+
+Concepts Learned:
+- Node.js Basics
+- Express.js Routing
+- EJS Templating
+- GET & POST Requests
+- Middleware
+- Serving Static Files
+- Dynamic Rendering
+- Form Handling
+- Full Stack Project Structure
+
+
 
 ## 🎯 Goal
 
