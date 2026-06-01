@@ -170,6 +170,28 @@ Concepts Learned:
 - Form Handling
 - Full Stack Project Structure
 
+### Day 12 — Full Stack Capstone Project ⚡
+
+Built a futuristic student productivity dashboard called STUDYFLOW using Node.js, Express, EJS, and JavaScript.
+
+Project:
+- STUDYFLOW
+
+Concepts Learned:
+- Full Stack Project Structure
+- Node.js & Express.js
+- EJS Templating
+- Dynamic Rendering
+- Form Handling
+- DOM Manipulation
+- JavaScript Logic
+- Theme Toggling
+- Dynamic Task Suggestions
+- Deadline Tracking System
+- Priority-Based UI Design
+- Glassmorphism UI
+- Floating UI Animations
+
 
 
 ## 🎯 Goal
