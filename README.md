@@ -191,6 +191,31 @@ Concepts Learned:
 - Priority-Based UI Design
 - Glassmorphism UI
 - Floating UI Animations
+###Day 13 of My Full Stack Web Development Journey
+Project:
+- STUDYFLOW
+Concepts Learned:
+-Fetch API
+-Async / Await
+-JSON Data Handling
+-Browser Geolocation API
+-Error Handling
+-Local Storage
+-Dynamic DOM Manipulation
+-Real-World API Integration
+
+###STUDYFLOW API Integration - Day 14
+Project:
+- STUDYFLOW
+
+Concepts Learned:
+- REST API fundamentals
+- Express.js routes
+- GET requests
+- Fetch API
+- JSON responses
+- Communication between two applications
+- Client-Server architecture concepts
 
 
 
