@@ -191,20 +191,21 @@ Concepts Learned:
 - Priority-Based UI Design
 - Glassmorphism UI
 - Floating UI Animations
-###Day 13 of My Full Stack Web Development Journey
+  
+### Day 13 — Full Stack Capstone Project with fetch API
 Project:
-- STUDYFLOW
-Concepts Learned:
--Fetch API
--Async / Await
--JSON Data Handling
--Browser Geolocation API
--Error Handling
--Local Storage
--Dynamic DOM Manipulation
--Real-World API Integration
+ - STUDYFLOW
+ Concepts Learned:
+ -Fetch API
+ -Async / Await
+ -JSON Data Handling
+ -Browser Geolocation API
+ -Error Handling
+ -Local Storage
+ -Dynamic DOM Manipulation
+ -Real-World API Integration
 
-###STUDYFLOW API Integration - Day 14
+### Day 14 — Integration with More APIs ⚡
 Project:
 - STUDYFLOW
 
@@ -217,7 +218,7 @@ Concepts Learned:
 - Communication between two applications
 - Client-Server architecture concepts
 
-# StudyFlow API Task Management System
+# Day-15 StudyFlow API Task Management System
 
 ## Overview
 
