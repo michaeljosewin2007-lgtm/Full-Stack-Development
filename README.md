@@ -217,6 +217,110 @@ Concepts Learned:
 - Communication between two applications
 - Client-Server architecture concepts
 
+# StudyFlow API Task Management System
+
+## Overview
+
+StudyFlow is a Full Stack project that demonstrates communication between two separate Express.js applications using REST APIs.
+
+The project consists of:
+
+### Student Dashboard
+
+* Stores study tasks
+* Provides API endpoints
+* Manages task data
+
+### Teacher Dashboard
+
+* Fetches student tasks
+* Creates new tasks
+* Deletes existing tasks
+* Communicates with the Student Dashboard through API requests
+
+This project simulates a real-world client-server architecture where multiple applications exchange data through REST APIs.
+
+---
+
+## Features
+
+### GET Request
+
+Teachers can fetch tasks from the Student Dashboard.
+
+### POST Request
+
+Teachers can create and send new tasks directly to the Student Dashboard.
+
+### DELETE Request
+
+Teachers can remove tasks through API endpoints.
+
+### REST API Integration
+
+Applications communicate using:
+
+* GET
+* POST
+* DELETE
+
+requests.
+
+### Dynamic Task Management
+
+Tasks include:
+
+* Title
+* Subject
+* Deadline
+* Priority
+
+### Express.js Backend
+
+Built using:
+
+* Node.js
+* Express.js
+* EJS
+* JavaScript
+
+---
+
+## Technologies Used
+
+* Node.js
+* Express.js
+* JavaScript
+* EJS
+* REST APIs
+* Fetch API
+* HTML5
+* CSS3
+
+---
+
+## What I Learned
+
+* REST API fundamentals
+* Client-server communication
+* JSON data exchange
+* API route creation
+* Fetch API requests
+* Cross-application communication
+* CRUD operations
+* Backend architecture concepts
+
+---
+
+## Future Improvements
+
+* PUT request support
+* Database integration (MongoDB)
+* Authentication system
+* Real-time updates using Socket.IO
+* User roles (Teacher / Student)
+
+---
 
 
 ## 🎯 Goal
