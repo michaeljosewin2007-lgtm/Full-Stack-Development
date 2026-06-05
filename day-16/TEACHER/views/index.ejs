@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STUDYFLOW</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <h1>📚 STUDYFLOW</h1>
+
+            <p>
+                Teacher's Dashboard ⚡
+            </p>
+
+        </div>
+
+
+
+        <div class="main-content">
+
+            <div class="top-section">
+
+                <h2>
+                    Add Study Task
+                </h2>
+
+                <form action="/addTask" method="POST" class="task-form">
+
+                    <input type="text" name="title" placeholder="Task Title" required>
+
+
+
+                    <input type="text" name="subject" placeholder="Subject" required>
+
+
+
+                    <input type="date" name="deadline" required>
+
+
+
+                    <select name="priority">
+
+                        <option>
+                            High
+                        </option>
+
+                        <option>
+                            Medium
+                        </option>
+
+                        <option>
+                            Low
+                        </option>
+
+                    </select>
+
+
+
+                    <button type="submit">
+
+                        Add Task ⚡
+
+                    </button>
+
+                </form>
+
+            </div>
+            
+            <div class="suggestion-box">
+            
+                <h2>
+                    Suggestion ⚡
+                </h2>
+            
+                <p id="suggestionText">
+            
+                    Add tasks to get recommendations
+            
+                </p>
+            
+            </div>
+
+            <div class="api-section">
+            
+                <h2>
+                    👨‍🎓 Teacher's Dashboard
+                </h2>
+            
+                <div class="api-buttons">
+            
+                    <button id="getTasksBtn">
+                        GET Tasks 📥
+                    </button>
+            
+                    <button id="postTaskBtn" type="button">
+                        POST Task ➕
+                    </button>
+        
+                </div>
+            
+                <div id="apiResult">
+                
+                    Waiting for API action...
+                
+                </div>
+                
+                <div class="student-tasks">
+                
+                    <h3>📋 Tasks from API</h3>
+                
+                    <div id="studentTasksContainer">
+                
+                        <% if(studentTasks){ %>
+                
+                            <% studentTasks.forEach(function(task){ %>
+                
+                                <div class="student-card">
+                
+                                    <h4>
+                                        <%= task.title %>
+                                    </h4>
+                
+                                    <p>📚 <%= task.subject %>
+                                    </p>
+                
+                                    <p class="api-priority <%= task.priority.toLowerCase() %>">
+                                        ⚡ <%= task.priority %>
+                                    </p>
+                
+                                </div>
+                
+                                <% }) %>
+                
+                                    <% } %>
+                
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+            <div class="theme-toggle-container">
+            
+                <span>
+                    😌 Chill
+                </span>
+            
+                <label class="switch">
+            
+                    <input type="checkbox" id="modeToggle">
+            
+                    <span class="slider"></span>
+            
+                </label>
+            
+                <span>
+                    🎯 Focus
+                </span>
+            
+            </div>  
+
+
+
+            <div class="tasks-section">
+
+                <% tasks.forEach(function(task){ %>
+
+                    <div class="task-card">
+
+                        <h3>
+                            <%= task.title %>
+                        </h3>
+
+                        <p>
+                            Subject:
+                            <%= task.subject %>
+                        </p>
+
+                        <p class="deadline">
+                            Deadline:
+                            <%= task.deadline %>
+                        </p>
+
+                        <p class="priority">
+                            Priority:
+                            <%= task.priority %>
+                        </p>
+                        <form action="/completeTask/<%= task.id %>" method="POST">
+                        
+                            <button class="complete-btn">
+                        
+                                Completed ✅
+                        
+                            </button>
+                        
+                        </form>
+
+                    </div>
+
+                    <% }) %>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
