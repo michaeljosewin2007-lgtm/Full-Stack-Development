@@ -322,6 +322,47 @@ Built using:
 * User roles (Teacher / Student)
 
 ---
+🚀 Day 16 of My Full Stack Web Development Journey
+
+Today, I built a full-stack project called **StudyFlow** — a Student & Teacher Task Management System powered by PostgreSQL.
+
+This project was a major step forward because I moved beyond basic CRUD applications and implemented communication between two separate services.
+
+👨‍🎓 Student Dashboard:
+
+* Create and manage study tasks
+* Set priorities and deadlines
+* Import assignments from teachers
+* PostgreSQL-backed task storage
+
+👩‍🏫 Teacher Dashboard:
+
+* Create assignments
+* Manage shared tasks
+* Synchronize assignments with students
+
+💡 One of the most interesting parts of this project was designing a Teacher → Student task synchronization workflow using PostgreSQL. Teacher-created assignments can be imported into the student dashboard while maintaining database relationships through linked IDs.
+
+Through this project, I practiced:
+
+✅ PostgreSQL Integration
+✅ Express.js REST APIs
+✅ CRUD Operations
+✅ Multi-Service Architecture
+✅ Database Relationships
+✅ Fetch API & Async JavaScript
+✅ Data Synchronization Logic
+✅ Full Stack Development
+
+💻 Tech Used:
+
+* HTML5
+* CSS3
+* JavaScript
+* Node.js
+* Express.js
+* PostgreSQL
+* Axios
 
 
 ## 🎯 Goal
