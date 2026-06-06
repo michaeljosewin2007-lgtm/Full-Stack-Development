@@ -364,6 +364,74 @@ Through this project, I practiced:
 * PostgreSQL
 * Axios
 
+# StudyFlow - Authentication System Upgrade (Day 17)
+
+## Overview
+
+Today I upgraded StudyFlow by implementing a complete user authentication system using PostgreSQL and bcrypt.
+
+This upgrade allows users to create accounts, securely store credentials, and log in to access the application.
+
+## Features Implemented
+
+### User Registration
+
+* Create a new account
+* Store user details in PostgreSQL
+* Prevent duplicate email registrations
+
+### Password Security
+
+* Passwords are hashed using bcrypt
+* 10 salt rounds for enhanced security
+* Plain-text passwords are never stored
+
+### User Login
+
+* Verify user credentials
+* Compare passwords using bcrypt.compare()
+* Redirect authenticated users to the StudyFlow dashboard
+
+### Error Handling
+
+* Email already registered
+* User not found
+* Incorrect password
+* User-friendly feedback displayed directly on the authentication page
+
+## Technologies Used
+
+* Node.js
+* Express.js
+* PostgreSQL
+* bcrypt
+* EJS
+* HTML5
+* CSS3
+* JavaScript
+
+## What I Learned
+
+* Authentication fundamentals
+* Password hashing and salting
+* Secure credential storage
+* User validation workflows
+* PostgreSQL integration with Express
+* Building better user experiences through form validation and error handling
+
+## Next Steps
+
+* Session Management
+* Protected Routes
+* Logout Functionality
+* User-specific dashboards
+* Role-based access (Teacher / Student)
+
+## Project Status
+
+StudyFlow is evolving from a simple task manager into a full-stack web application with secure authentication and database-driven architecture.
+
+
 
 ## 🎯 Goal
 
