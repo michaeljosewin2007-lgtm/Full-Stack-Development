@@ -430,6 +430,94 @@ This upgrade allows users to create accounts, securely store credentials, and lo
 ## Project Status
 
 StudyFlow is evolving from a simple task manager into a full-stack web application with secure authentication and database-driven architecture.
+# 📚 StudyFlow – Day 18
+
+## 🔐 Authentication & User-Specific Dashboard
+
+Today, I transformed StudyFlow from a shared task management system into a secure multi-user application by implementing authentication, session management, and user-specific task isolation.
+
+---
+
+## 🚀 Features Implemented
+
+### 👤 User Registration
+
+* Created a registration system for new users.
+* User details are stored in PostgreSQL.
+* Prevented duplicate email registrations.
+
+### 🔒 Secure Password Hashing
+
+* Integrated bcrypt for password security.
+* Passwords are hashed before being stored in the database.
+* Improved application security following industry practices.
+
+### 🔑 User Login System
+
+* Added login functionality.
+* Validates user credentials against stored records.
+* Displays proper error messages for invalid login attempts.
+
+### 🧠 Session-Based Authentication
+
+* Implemented Express Session.
+* Maintains login state across requests.
+* Restricted access to protected routes.
+
+### 🚪 Logout Functionality
+
+* Added secure logout support.
+* Destroys active sessions.
+* Redirects users back to the authentication page.
+
+### 📋 User-Specific Tasks
+
+* Added a `user_id` column to the tasks table.
+* Each user now sees only their own tasks.
+* Prevented cross-user access to task data.
+
+### 👨‍🏫 Teacher Task Integration
+
+* Updated teacher task imports to automatically associate imported tasks with the currently logged-in user.
+* Teacher tasks now remain isolated per user.
+
+### 🎨 UI Improvements
+
+* Styled authentication pages to match the StudyFlow theme.
+* Added visible error messages for registration and login failures.
+* Improved overall user experience.
+
+---
+
+## 🛠️ Tech Stack
+
+* HTML5
+* CSS3
+* JavaScript
+* Node.js
+* Express.js
+* PostgreSQL
+* EJS
+* bcrypt
+* express-session
+
+---
+
+## 🎯 What I Learned
+
+* Password hashing with bcrypt
+* Session-based authentication
+* Route protection
+* User authorization concepts
+* Multi-user database architecture
+* Secure login and registration flows
+* Associating data with authenticated users
+
+---
+
+## 📌 Next Goal
+
+Continue improving StudyFlow by adding advanced user experience features and making the application feel even closer to a production-ready platform.
 
 
 
