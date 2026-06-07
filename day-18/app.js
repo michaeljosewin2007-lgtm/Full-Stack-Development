@@ -1,0 +1,355 @@
+import express from "express";
+import cors from "cors";
+import fs from "fs";
+import db from "./db.js";
+import pool from "./db.js";
+import bcrypt from "bcrypt";
+import session from "express-session";
+
+const app = express();
+
+
+
+app.use(cors());
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
+app.use(
+    session({
+
+        secret:
+        "studyflow-secret-key",
+
+        resave: false,
+
+        saveUninitialized: false
+    })
+);
+
+app.use(express.static("public"));
+
+app.set("view engine", "ejs");
+
+db.query("SELECT NOW()")
+.then(result => { 
+
+    console.log(
+        "Database Connected:",
+        result.rows[0]
+    );
+
+})
+.catch(error => {
+
+    console.log(error);
+});
+ 
+app.get("/auth", function(req,res){
+
+    res.render("login-register", {
+
+        registerError: null,
+        loginError: null
+    });
+});
+app.post("/register", async function(req,res){
+
+    const { name, email, password } = req.body;
+
+    const existingUser =
+    await pool.query(
+
+        `SELECT *
+         FROM users
+         WHERE email = $1`,
+
+        [email]
+    );
+
+    if(existingUser.rows.length > 0){
+
+        return res.render("login-register", {
+
+    registerError: "Email already registered",
+    loginError: null
+});
+    }
+
+    const hashedPassword =
+    await bcrypt.hash(password, 10);
+
+    await pool.query(
+
+        `INSERT INTO users
+        (name,email,password)
+
+        VALUES($1,$2,$3)`,
+
+        [
+            name,
+            email,
+            hashedPassword
+        ]
+    );
+
+    res.redirect("/auth");
+});
+app.post("/login", async function(req,res){
+
+    const { email, password } = req.body;
+
+    const result =
+    await pool.query(
+
+        `SELECT *
+         FROM users
+         WHERE email = $1`,
+
+        [email]
+    );
+
+    if(result.rows.length === 0){
+
+        return res.render("login-register", {
+
+    registerError: null,
+    loginError: "User not found. Please register first."
+});
+    }
+
+    const user =
+    result.rows[0];
+
+    const match =
+    await bcrypt.compare(
+        password,
+        user.password
+    );
+
+    if(!match){
+
+        return res.render("login-register", {
+
+    registerError: null,
+    loginError: "Email or password incorrect"
+});
+    }
+    req.session.userId =
+user.id;
+
+req.session.userName =
+user.name;
+
+    res.redirect("/");
+});
+app.get("/logout", function(req,res){
+
+    req.session.destroy(function(){
+
+        res.redirect("/auth");
+    });
+});
+
+
+app.get("/", async function (req, res) {
+    if(!req.session.userId){
+
+    return res.redirect("/auth"); 
+}
+
+    const result =
+await pool.query(
+
+    `SELECT *
+     FROM tasks
+     WHERE user_id = $1
+     ORDER BY id DESC`,
+
+    [req.session.userId]
+); 
+
+    res.render("index", {
+
+        tasks: result.rows
+    });
+});
+
+app.post("/addTask", async function(req,res){
+
+    await pool.query(
+
+    `INSERT INTO tasks
+    (
+        user_id,
+        title,
+        subject,
+        deadline,
+        priority
+    )
+
+    VALUES ($1,$2,$3,$4,$5)`,
+
+        [
+    req.session.userId,
+    req.body.title,
+    req.body.subject,
+    req.body.deadline,
+    req.body.priority
+]
+    );
+
+    res.redirect("/");
+});
+app.post(
+"/completeTask/:id",
+
+async function(req,res){
+
+    const taskId =
+    Number(req.params.id);
+
+    await pool.query(
+
+        `DELETE FROM tasks
+         WHERE id = $1`,
+
+        [taskId]
+    );
+
+    res.redirect("/");
+});
+app.get("/tasks", async (req, res) => {
+
+    const result =
+    await pool.query(
+    `SELECT *
+     FROM tasks
+     WHERE user_id = $1
+     ORDER BY id DESC`,
+
+    [req.session.userId]
+);
+
+    res.json(result.rows);
+
+});
+app.get(
+"/teacher/studentTasks",
+
+async function(req,res){
+
+    const result =
+    await pool.query(
+
+        `SELECT *
+         FROM tasks
+         ORDER BY id DESC`
+    );
+
+    res.json(result.rows);
+});
+app.post("/importTeacherTasks", async (req, res) => {
+
+    const exists =
+    await pool.query(
+
+    `INSERT INTO tasks
+    (
+        user_id,
+        teacher_id,
+        title,
+        subject,
+        deadline,
+        priority
+    )
+
+    VALUES ($1,$2,$3,$4,$5,$6)`,
+
+    [
+        req.session.userId,
+        req.body.teacherId,
+        req.body.title,
+        req.body.subject,
+        req.body.deadline,
+        req.body.priority
+    ]
+);
+
+    if (exists.rows.length > 0) {
+
+        return res.json({
+            message: "Task already imported"
+        });
+    }
+
+    await pool.query(
+
+        `INSERT INTO tasks
+        (
+            teacher_id,
+            title,
+            subject,
+            deadline,
+            priority
+        )
+
+        VALUES ($1,$2,$3,$4,$5)`,
+
+        [
+            req.body.teacherId,
+            req.body.title,
+            req.body.subject,
+            req.body.deadline,
+            req.body.priority
+        ]
+    );
+
+    res.json({
+        message: "Imported"
+    });
+});
+app.delete("/tasks/:id", async (req,res)=>{
+
+    const taskId =
+    Number(req.params.id);
+
+    await pool.query(
+
+        `DELETE FROM tasks
+         WHERE id = $1`,
+
+        [taskId]
+    );
+
+    res.json({
+        message:
+        "Task deleted"
+    });
+});
+app.delete(
+"/teacherImportedTasks/:teacherId",
+
+async (req,res)=>{
+
+    const teacherId =
+    Number(req.params.teacherId);
+
+    await pool.query(
+
+        `DELETE FROM tasks
+         WHERE teacher_id = $1`,
+
+        [teacherId]
+    );
+
+    res.json({
+        message:"Imported tasks removed"
+    });
+});
+
+
+
+app.listen(3000, function () {
+
+    console.log("Server running on port 3000");
+});
