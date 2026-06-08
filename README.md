@@ -543,11 +543,7 @@ CineFinder is a React-based movie search application that allows users to search
 - Vite
 - OMDb API
 
-## 📸 Screenshots
 
-(Add screenshots here)
-
-## 📂 Project Structure
 
 
 ## 🎯 Goal
