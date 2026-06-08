@@ -519,6 +519,35 @@ Today, I transformed StudyFlow from a shared task management system into a secur
 
 Continue improving StudyFlow by adding advanced user experience features and making the application feel even closer to a production-ready platform.
 
+# Day-19 🎬 CineFinder
+
+CineFinder is a React-based movie search application that allows users to search for movies, browse movie information, and save their favorite movies for quick access.
+
+## 🚀 Features
+
+- Search movies using the OMDb API
+- Dynamic movie card display
+- Responsive grid layout
+- Modern UI design
+- Sidebar navigation
+- Favorites system
+- Add and remove favorite movies
+- React Hooks for state management
+- Animated gradient background
+
+## 🛠️ Technologies Used
+
+- React
+- JavaScript
+- CSS3
+- Vite
+- OMDb API
+
+## 📸 Screenshots
+
+(Add screenshots here)
+
+## 📂 Project Structure
 
 
 ## 🎯 Goal
